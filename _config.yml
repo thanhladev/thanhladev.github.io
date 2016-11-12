@@ -1,25 +1,25 @@
 # Site settings
-title: Ethanify
-description: All about Ethan!
+title: Thanh La
+description: All about Lã!
 bio: >
-  Hi, I'm Ethan.
+  Hi, I'm Lã.
   I'm passionate about creating awesome products that help plenty of people improving their lives.
-url: 'http://ethanify.me'
-blog_url: 'http://dev.ethanify.me'
+url: 'https://thanhladev.github.io/'
+blog_url: 'https://docbohanh.github.io/'
 baseurl:
 
 author:
-  name: 'Ethan Nguyen'
-  email: thanhnx.605@gmail.com
-  twitter_username: ethan605
-  facebook_username: ethan.605
-  github_username: ethan605
-  linkedin_username: ethan605
+  name: 'MILIKET'
+  email: huuthanhla@gmail.com
+  twitter_username: docbohanh
+  facebook_username: docbohanh
+  github_username: docbohanh
+  #linkedin_username: ethan605
 facebook:
-  app_id: 1783427568545702
-  admins: 1119670477
-  publisher: 1119670477
-  page: 275993682774772
+  #app_id: 1783427568545702
+  #admins: 1119670477
+  #publisher: 1119670477
+  #page: 275993682774772
 
 # Build settings
 destination: _site
