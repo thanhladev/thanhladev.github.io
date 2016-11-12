@@ -1,2 +1,2 @@
-# ethan605.github.io
-My Blogs' Index
+# docbohanh.github.io
+About me's Index
