@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/docbohanh
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://thanhladev.github.io
+  * I am docbohanh (https://keybase.io/docbohanh) on keybase.
+  * I have a public key ASB3UanEnENvWbCldY3r7twoazNjdvvDtRRgvpB7z3TnVgo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120fbe500c46bb77067f38c3b8b3891172db9ce235937860ebb0786713b66d901f40a",
+      "host": "keybase.io",
+      "kid": "01207751a9c49c436f59b0a5758debeedc286b336376fbc3b51460be907bcf74e7560a",
+      "uid": "4f7a74e37925a559f041c1eb59bdec19",
+      "username": "docbohanh"
+    },
+    "merkle_root": {
+      "ctime": 1568196333,
+      "hash": "ba30b1a9031bbb3a140b811e9d48de33e03fbafdac21503d0d2f2fa9fb8f400a926b96ba2c8096833e1091227c8f5ce25a3381e4c3b11753da4b612af8ef4196",
+      "hash_meta": "ea62855c7df93d5799d3d48b1e8e0e7ad5ae2bcdb0433c8c048b10c3b1c40bcc",
+      "seqno": 6667921
+    },
+    "service": {
+      "entropy": "tEhNS2dXnHfHVPGyPxrDxFqk",
+      "hostname": "thanhladev.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "4.4.1"
+  },
+  "ctime": 1568196345,
+  "expire_in": 504576000,
+  "prev": "885a8a25d7dbea29704c2315683eb3c221be58652bb94f78fa98a77aa14ad0d2",
+  "seqno": 14,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgd1GpxJxDb1mwpXWN6+7cKGszY3b7w7UUYL6Qe89051YKp3BheWxvYWTESpcCDsQgiFqKJdfb6ilwTCMVaD6zwiG+WGUruU94+pineqFK0NLEIDDxVU4QGe+X64pBGQRoBdXBiqRIeLUGeBme+oL+bMtAAgHCo3NpZ8RAbqCCZkStwK6KcHT1MdvI8wJBu1MVklatHsQBzjQanq3rMw46QSiMB1KqkeuyOFOz5jhJWEIyzXLcnGqcEBlmDahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEILkFvLCLYgxug7tNxz+O1Wq6MJ9TP5F3OW9lBLX9IH/0o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/docbohanh
+
+==================================================================
