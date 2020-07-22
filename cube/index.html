@@ -1,162 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <title>Đinh Hương</title>
-  <link rel="stylesheet" href="dist/css/cube.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!--
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  -->
+  <title>Hiệu ứng CSS 3D</title>
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+
+  <script type="text/javascript" charset="utf-8">
+    function hasClassName(inElement, inClassName)
+    {
+        var regExp = new RegExp('(?:^|\\s+)' + inClassName + '(?:\\s+|$)');
+        return regExp.test(inElement.className);
+    }
+
+    function addClassName(inElement, inClassName)
+    {
+        if (!hasClassName(inElement, inClassName))
+            inElement.className = [inElement.className, inClassName].join(' ');
+    }
+
+    function removeClassName(inElement, inClassName)
+    {
+        if (hasClassName(inElement, inClassName)) {
+            var regExp = new RegExp('(?:^|\\s+)' + inClassName + '(?:\\s+|$)', 'g');
+            var curClasses = inElement.className;
+            inElement.className = curClasses.replace(regExp, ' ');
+        }
+    }
+
+    function toggleClassName(inElement, inClassName)
+    {
+        if (hasClassName(inElement, inClassName))
+            removeClassName(inElement, inClassName);
+        else
+            addClassName(inElement, inClassName);
+    }
+
+    function toggleShape()
+    {
+      var shape = document.getElementById('shape');
+      if (hasClassName(shape, 'ring')) {
+        removeClassName(shape, 'ring');
+        addClassName(shape, 'cube');
+      } else {
+        removeClassName(shape, 'cube');
+        addClassName(shape, 'ring');
+      }
+      
+      var stage = document.getElementById('stage');
+      if (hasClassName(shape, 'ring'))
+        stage.style.webkitTransform = 'translateZ(-200px)';
+      else
+        stage.style.webkitTransform = '';
+    }
+  </script>
 </head>
 <body>
 
-  <section class="section is-dark">
-    <span class="section-title">I look forward to seeing you <3</span>
-    <div class="cube-wrapper">
-      <div class="cube" id="cube-1">
-        <div class="cube-top"    style="background-image: url('src/img/image-01.jpg')"></div>
-        <div class="cube-bottom" style="background-image: url('src/img/image-02.jpg')"></div>
-        <div class="cube-left"   style="background-image: url('src/img/image-03.jpg')"></div>
-        <div class="cube-right"  style="background-image: url('src/img/image-04.jpg')"></div>
-        <div class="cube-front"  style="background-image: url('src/img/image-05.jpg')"></div>
-        <div class="cube-back"   style="background-image: url('src/img/image-06.jpg')"></div>
+  <div style="text-align: right;padding: 15px;"><a href="#" class="classname" onclick="toggleShape()">Đổi kiểu</a></div>
+  
+  <div id="container">
+    <div id="stage">
+      <div id="shape" class="cube backfaces">
+        <div class="plane one"></div>
+        <div class="plane two"></div>
+        <div class="plane three"></div>
+        <div class="plane four"></div>
+        <div class="plane five"></div>
+        <div class="plane six"></div>
+        <div class="plane seven"></div>
+        <div class="plane eight"></div>
+        <div class="plane nine"></div>
+        <div class="plane ten"></div>
+        <div class="plane eleven"></div>
+        <div class="plane twelve"></div>
       </div>
     </div>
-  </section>
-<!-- 
-  <section class="section is-blue">
-    <span class="section-title">has-shadow</span>
-    <div class="cube-wrapper has-shadow">
-      <div class="cube" id="cube-2">
-        <div class="cube-top"    style="background-image: url('src/img/image-01.jpg')"></div>
-        <div class="cube-bottom" style="background-image: url('src/img/image-02.jpg')"></div>
-        <div class="cube-left"   style="background-image: url('src/img/image-03.jpg')"></div>
-        <div class="cube-right"  style="background-image: url('src/img/image-04.jpg')"></div>
-        <div class="cube-front"  style="background-image: url('src/img/image-05.jpg')"></div>
-        <div class="cube-back"   style="background-image: url('src/img/image-06.jpg')"></div>
-      </div>
-    </div>
-  </section>
+  </div>
 
-  <section class="section is-white">
-    <span class="section-title">is-floating</span>
-    <div class="cube-wrapper has-shadow is-floating">
-      <div class="cube" id="cube-3">
-        <div class="cube-top"    style="background-image: url('src/img/image-01.jpg')"></div>
-        <div class="cube-bottom" style="background-image: url('src/img/image-02.jpg')"></div>
-        <div class="cube-left"   style="background-image: url('src/img/image-03.jpg')"></div>
-        <div class="cube-right"  style="background-image: url('src/img/image-04.jpg')"></div>
-        <div class="cube-front"  style="background-image: url('src/img/image-05.jpg')"></div>
-        <div class="cube-back"   style="background-image: url('src/img/image-06.jpg')"></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section is-blue">
-    <span class="section-title">is-transparent</span>
-    <div class="cube-wrapper has-shadow is-floating">
-      <div class="cube is-transparent" id="cube-4">
-        <div class="cube-top"    style="background-image: url('src/img/image-01.jpg')"></div>
-        <div class="cube-bottom" style="background-image: url('src/img/image-02.jpg')"></div>
-        <div class="cube-left"   style="background-image: url('src/img/image-03.jpg')"></div>
-        <div class="cube-right"  style="background-image: url('src/img/image-04.jpg')"></div>
-        <div class="cube-front"  style="background-image: url('src/img/image-05.jpg')"></div>
-        <div class="cube-back"   style="background-image: url('src/img/image-06.jpg')"></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section is-dark">
-    <span class="section-title">is-rounded</span>
-    <div class="cube-wrapper">
-      <div class="cube is-rounded" id="cube-5">
-        <div class="cube-top"    style="background-image: url('src/img/image-01.jpg')"></div>
-        <div class="cube-bottom" style="background-image: url('src/img/image-02.jpg')"></div>
-        <div class="cube-left"   style="background-image: url('src/img/image-03.jpg')"></div>
-        <div class="cube-right"  style="background-image: url('src/img/image-04.jpg')"></div>
-        <div class="cube-front"  style="background-image: url('src/img/image-05.jpg')"></div>
-        <div class="cube-back"   style="background-image: url('src/img/image-06.jpg')"></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section is-blue">
-    <span class="section-title">is-perspective</span>
-    <div class="cube-wrapper">
-      <div class="cube" id="cube-6">
-        <div class="cube-top"    style="background-image: url('src/img/image-01.jpg')"></div>
-        <div class="cube-bottom" style="background-image: url('src/img/image-02.jpg')"></div>
-        <div class="cube-left"   style="background-image: url('src/img/image-03.jpg')"></div>
-        <div class="cube-right"  style="background-image: url('src/img/image-04.jpg')"></div>
-        <div class="cube-front"  style="background-image: url('src/img/image-05.jpg')"></div>
-        <div class="cube-back"   style="background-image: url('src/img/image-06.jpg')"></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section is-red">
-    <span class="section-title">is-perspective is-rounded</span>
-    <div class="cube-wrapper">
-      <div class="cube is-rounded" id="cube-7">
-        <div class="cube-top"    style="background-image: url('src/img/image-01.jpg')"></div>
-        <div class="cube-bottom" style="background-image: url('src/img/image-02.jpg')"></div>
-        <div class="cube-left"   style="background-image: url('src/img/image-03.jpg')"></div>
-        <div class="cube-right"  style="background-image: url('src/img/image-04.jpg')"></div>
-        <div class="cube-front"  style="background-image: url('src/img/image-05.jpg')"></div>
-        <div class="cube-back"   style="background-image: url('src/img/image-06.jpg')"></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section is-white">
-    <span class="section-title">MAGIC</span>
-    <div class="cube-wrapper">
-      <div class="cube" id="cube-8">
-        <div class="cube-top"    style="background-image: url('src/img/image-01.jpg')"></div>
-        <div class="cube-bottom" style="background-image: url('src/img/image-02.jpg')"></div>
-        <div class="cube-left"   style="background-image: url('src/img/image-03.jpg')"></div>
-        <div class="cube-right"  style="background-image: url('src/img/image-04.jpg')"></div>
-        <div class="cube-front"  style="background-image: url('src/img/image-05.jpg')"></div>
-        <div class="cube-back"   style="background-image: url('src/img/image-06.jpg')"></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section is-dark">
-    <span class="section-title">MAGIC WITH LIGHT :D</span>
-    <div class="cube-wrapper">
-      <div class="cube" id="cube-9">
-        <div class="cube-light"></div>
-        <div class="cube-top"    style="background-image: url('src/img/image-01.jpg')"></div>
-        <div class="cube-bottom" style="background-image: url('src/img/image-02.jpg')"></div>
-        <div class="cube-left"   style="background-image: url('src/img/image-03.jpg')"></div>
-        <div class="cube-right"  style="background-image: url('src/img/image-04.jpg')"></div>
-        <div class="cube-front"  style="background-image: url('src/img/image-05.jpg')"></div>
-        <div class="cube-back"   style="background-image: url('src/img/image-06.jpg')"></div>
-      </div>
-    </div>
-  </section> -->
-
-  <script src="dist/js/cube.js"></script>
-  <script type="text/javascript">
-    new Cube('#cube-1');
-    new Cube('#cube-2');
-    new Cube('#cube-3');
-    new Cube('#cube-4');
-    new Cube('#cube-5');
-    new Cube('#cube-6', {
-      openClass: 'is-perspective',
-    });
-    new Cube('#cube-7', {
-      openClass: 'is-perspective',
-    });
-    new Cube('#cube-8', {
-      openClass: 'is-magic',
-      closeClass: 'is-unmagic',
-      time: 3000
-    });
-    new Cube('#cube-9', {
-      openClass: 'is-magic',
-      closeClass: 'is-unmagic',
-      time: 3000
-    });
-  </script>
 </body>
 </html>
