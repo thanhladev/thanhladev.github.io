@@ -36,13 +36,15 @@ h2 {
 
 .avatar {
     vertical-align: middle;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    box-shadow: 3px 1px 2px #ddd;
-      -moz-box-shadow: 3px 1px 2px #ddd;
-      -webkit-box-shadow: 3px 1px 2px #ddd;
-      -khtml-box-shadow: 3px 1px 2px #ddd;
+    border:2.5px solid #fff;
+    -moz-box-shadow: 0px 6px 5px #ccc;
+    -webkit-box-shadow: 0px 6px 5px #ccc;
+    box-shadow: 0px 6px 5px #ccc;
+    -moz-border-radius:120px;
+    -webkit-border-radius:120px;
   }
 
 h1 {
