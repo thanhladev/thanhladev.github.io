@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from keo.aoe.vn/bg.png by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Oct 2024 06:34:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <title>AOE - Sparta</title>
+    <link rel="stylesheet" href="stylesecf3.css?t=1729662945">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+</head>
+<body>
+<form id="form" method="GET">
+	<div class="top-bar">
+		<input type="text" class="name-gamer" name="gamer" value="">
+		<input type="text" class="name-gamer gamer-2" name="gamer2" value="">
+		<input type="text" class="name-gamer result" name="result" value="">
+	</div>
+	<div class="left-bar">
+		<img src="left-bar.png" />
+	</div>
+	<div class="cam">
+		<div class="cam-right"></div>
+		<div class="cam-name">
+			<span class="hidden"></span><input type="text" class="cam-input" name="cam" value="" placeholder="">
+		</div>
+		<div class="cam-left"></div>
+	</div>
+	<script>
+	
+	$(function(){
+		$('.hidden').text($('.cam-input').val());
+		$('.cam-input').width($('.hidden').width() + 20);
+	}).on('input', function () {
+		$('.hidden').text($('.cam-input').val());
+		$('.cam-input').width($('.hidden').width() + 20);
+	});
+	</script>
+	<div class="tabs">
+		<div class="bq">Bảng quân</div>
+		<div class="tab v1">
+			<input type="radio" id="tab-1" name="tab-group-1" value="1" >
+			<label for="tab-1">1 VS 1</label>
+			<div class="content">
+				<input type="text" class="vdv-1" placeholder="VĐV" name="tab-1-vdv-1" value="">
+				<select class="select-q" name="empires-tab-1-1" onChange="onChangeSelect(this);">
+					<option value="0" >Random</option>
+					<option value="1" >Egyp</option>
+					<option value="2" >Greek</option>
+					<option value="3" >BabyL</option>
+					<option value="4" >Assy</option>
+					<option value="5" >Minoan</option>
+					<option value="6" >Hittite</option>
+					<option value="7" >Phoen</option>
+					<option value="8" >Sumerian</option>
+					<option value="9" >Persian</option>
+					<option value="10" >Shang</option>
+					<option value="11" >Yamato</option>
+					<option value="12" >Choson</option>
+					<option value="13" >Roman</option>
+					<option value="14" >Cartha</option>
+					<option value="15" >Palmyran</option>
+					<option value="16" >Macedo</option>
+				</select>
+				<input type="text" class="vdv-2" placeholder="VĐV" name="tab-1-vdv-2" value="">
+				<select class="select-q" name="empires-tab-1-2" onChange="onChangeSelect(this);">
+					<option value="0" >Random</option>
+					<option value="1" >Egyp</option>
+					<option value="2" >Greek</option>
+					<option value="3" >BabyL</option>
+					<option value="4" >Assy</option>
+					<option value="5" >Minoan</option>
+					<option value="6" >Hittite</option>
+					<option value="7" >Phoen</option>
+					<option value="8" >Sumerian</option>
+					<option value="9" >Persian</option>
+					<option value="10" >Shang</option>
+					<option value="11" >Yamato</option>
+					<option value="12" >Choson</option>
+					<option value="13" >Roman</option>
+					<option value="14" >Cartha</option>
+					<option value="15" >Palmyran</option>
+					<option value="16" >Macedo</option>
+				</select>
+			</div>
+		</div>
+		<div class="tab v2">
+			<input type="radio" id="tab-2" name="tab-group-1" value="2" >
+			<label for="tab-2">2 VS 2</label>
+			<div class="content">
+				<input type="text" class="vdv-1" placeholder="VĐV" name="tab-2-vdv-1" value="">
+				<select class="select-q" name="empires-tab-2-1" onChange="onChangeSelect(this);">
+					<option value="0" >Random</option>
+					<option value="1" >Egyp</option>
+					<option value="2" >Greek</option>
+					<option value="3" >BabyL</option>
+					<option value="4" >Assy</option>
+					<option value="5" >Minoan</option>
+					<option value="6" >Hittite</option>
+					<option value="7" >Phoen</option>
+					<option value="8" >Sumerian</option>
+					<option value="9" >Persian</option>
+					<option value="10" >Shang</option>
+					<option value="11" >Yamato</option>
+					<option value="12" >Choson</option>
+					<option value="13" >Roman</option>
+					<option value="14" >Cartha</option>
+					<option value="15" >Palmyran</option>
+					<option value="16" >Macedo</option>
+				</select>
+				<input type="text" class="vdv-2" placeholder="VĐV" name="tab-2-vdv-2" value="">
+				<select class="select-q" name="empires-tab-2-2" onChange="onChangeSelect(this);">
+					<option value="0" >Random</option>
+					<option value="1" >Egyp</option>
+					<option value="2" >Greek</option>
+					<option value="3" >BabyL</option>
+					<option value="4" >Assy</option>
+					<option value="5" >Minoan</option>
+					<option value="6" >Hittite</option>
+					<option value="7" >Phoen</option>
+					<option value="8" >Sumerian</option>
+					<option value="9" >Persian</option>
+					<option value="10" >Shang</option>
+					<option value="11" >Yamato</option>
+					<option value="12" >Choson</option>
+					<option value="13" >Roman</option>
+					<option value="14" >Cartha</option>
+					<option value="15" >Palmyran</option>
+					<option value="16" >Macedo</option>
+				</select>
+				<input type="text" class="vdv-1" placeholder="VĐV" name="tab-2-vdv-3" value="">
+				<select class="select-q" name="empires-tab-2-3" onChange="onChangeSelect(this);">
+					<option value="0" >Random</option>
+					<option value="1" >Egyp</option>
+					<option value="2" >Greek</option>
+					<option value="3" >BabyL</option>
+					<option value="4" >Assy</option>
+					<option value="5" >Minoan</option>
+					<option value="6" >Hittite</option>
+					<option value="7" >Phoen</option>
+					<option value="8" >Sumerian</option>
+					<option value="9" >Persian</option>
+					<option value="10" >Shang</option>
+					<option value="11" >Yamato</option>
+					<option value="12" >Choson</option>
+					<option value="13" >Roman</option>
+					<option value="14" >Cartha</option>
+					<option value="15" >Palmyran</option>
+					<option value="16" >Macedo</option>
+				</select>
+				<input type="text" class="vdv-2" placeholder="VĐV" name="tab-2-vdv-4" value="">
+				<select class="select-q" name="empires-tab-2-4" onChange="onChangeSelect(this);">
+					<option value="0" >Random</option>
+					<option value="1" >Egyp</option>
+					<option value="2" >Greek</option>
+					<option value="3" >BabyL</option>
+					<option value="4" >Assy</option>
+					<option value="5" >Minoan</option>
+					<option value="6" >Hittite</option>
+					<option value="7" >Phoen</option>
+					<option value="8" >Sumerian</option>
+					<option value="9" >Persian</option>
+					<option value="10" >Shang</option>
+					<option value="11" >Yamato</option>
+					<option value="12" >Choson</option>
+					<option value="13" >Roman</option>
+					<option value="14" >Cartha</option>
+					<option value="15" >Palmyran</option>
+					<option value="16" >Macedo</option>
+				</select>
+			</div>
+		</div>
+		<div class="tab v3">
+			<input type="radio" id="tab-3" name="tab-group-1" value="3" >
+			<label for="tab-3">3 VS 3</label>
+			<div class="content">
+				<input type="text" class="vdv-1" placeholder="VĐV" name="tab-3-vdv-1" value="">
+				<select class="select-q" name="empires-tab-3-1" onChange="onChangeSelect(this);">
+					<option value="0" >Random</option>
+					<option value="1" >Egyp</option>
+					<option value="2" >Greek</option>
+					<option value="3" >BabyL</option>
+					<option value="4" >Assy</option>
+					<option value="5" >Minoan</option>
+					<option value="6" >Hittite</option>
+					<option value="7" >Phoen</option>
+					<option value="8" >Sumerian</option>
+					<option value="9" >Persian</option>
+					<option value="10" >Shang</option>
+					<option value="11" >Yamato</option>
+					<option value="12" >Choson</option>
+					<option value="13" >Roman</option>
+					<option value="14" >Cartha</option>
+					<option value="15" >Palmyran</option>
+					<option value="16" >Macedo</option>
+				</select>
+				<input type="text" class="vdv-2" placeholder="VĐV" name="tab-3-vdv-2" value="">
+				<select class="select-q" name="empires-tab-3-2" onChange="onChangeSelect(this);">
+					<option value="0" >Random</option>
+					<option value="1" >Egyp</option>
+					<option value="2" >Greek</option>
+					<option value="3" >BabyL</option>
+					<option value="4" >Assy</option>
+					<option value="5" >Minoan</option>
+					<option value="6" >Hittite</option>
+					<option value="7" >Phoen</option>
+					<option value="8" >Sumerian</option>
+					<option value="9" >Persian</option>
+					<option value="10" >Shang</option>
+					<option value="11" >Yamato</option>
+					<option value="12" >Choson</option>
+					<option value="13" >Roman</option>
+					<option value="14" >Cartha</option>
+					<option value="15" >Palmyran</option>
+					<option value="16" >Macedo</option>
+				</select>
+				<input type="text" class="vdv-1" placeholder="VĐV" name="tab-3-vdv-3" value="">
+				<select class="select-q" name="empires-tab-3-3" onChange="onChangeSelect(this);">
+					<option value="0" >Random</option>
+					<option value="1" >Egyp</option>
+					<option value="2" >Greek</option>
+					<option value="3" >BabyL</option>
+					<option value="4" >Assy</option>
+					<option value="5" >Minoan</option>
+					<option value="6" >Hittite</option>
+					<option value="7" >Phoen</option>
+					<option value="8" >Sumerian</option>
+					<option value="9" >Persian</option>
+					<option value="10" >Shang</option>
+					<option value="11" >Yamato</option>
+					<option value="12" >Choson</option>
+					<option value="13" >Roman</option>
+					<option value="14" >Cartha</option>
+					<option value="15" >Palmyran</option>
+					<option value="16" >Macedo</option>
+				</select>
+				<input type="text" class="vdv-2" placeholder="VĐV" name="tab-3-vdv-4" value="">
+				<select class="select-q" name="empires-tab-3-4" onChange="onChangeSelect(this);">
+					<option value="0" >Random</option>
+					<option value="1" >Egyp</option>
+					<option value="2" >Greek</option>
+					<option value="3" >BabyL</option>
+					<option value="4" >Assy</option>
+					<option value="5" >Minoan</option>
+					<option value="6" >Hittite</option>
+					<option value="7" >Phoen</option>
+					<option value="8" >Sumerian</option>
+					<option value="9" >Persian</option>
+					<option value="10" >Shang</option>
+					<option value="11" >Yamato</option>
+					<option value="12" >Choson</option>
+					<option value="13" >Roman</option>
+					<option value="14" >Cartha</option>
+					<option value="15" >Palmyran</option>
+					<option value="16" >Macedo</option>
+				</select>
+				<input type="text" class="vdv-1" placeholder="VĐV" name="tab-3-vdv-5" value="">
+				<select class="select-q" name="empires-tab-3-5" onChange="onChangeSelect(this);">
+					<option value="0" >Random</option>
+					<option value="1" >Egyp</option>
+					<option value="2" >Greek</option>
+					<option value="3" >BabyL</option>
+					<option value="4" >Assy</option>
+					<option value="5" >Minoan</option>
+					<option value="6" >Hittite</option>
+					<option value="7" >Phoen</option>
+					<option value="8" >Sumerian</option>
+					<option value="9" >Persian</option>
+					<option value="10" >Shang</option>
+					<option value="11" >Yamato</option>
+					<option value="12" >Choson</option>
+					<option value="13" >Roman</option>
+					<option value="14" >Cartha</option>
+					<option value="15" >Palmyran</option>
+					<option value="16" >Macedo</option>
+				</select>
+				<input type="text" class="vdv-2" placeholder="VĐV" name="tab-3-vdv-6" value="">
+				<select class="select-q" name="empires-tab-3-6" onChange="onChangeSelect(this);">
+					<option value="0" >Random</option>
+					<option value="1" >Egyp</option>
+					<option value="2" >Greek</option>
+					<option value="3" >BabyL</option>
+					<option value="4" >Assy</option>
+					<option value="5" >Minoan</option>
+					<option value="6" >Hittite</option>
+					<option value="7" >Phoen</option>
+					<option value="8" >Sumerian</option>
+					<option value="9" >Persian</option>
+					<option value="10" >Shang</option>
+					<option value="11" >Yamato</option>
+					<option value="12" >Choson</option>
+					<option value="13" >Roman</option>
+					<option value="14" >Cartha</option>
+					<option value="15" >Palmyran</option>
+					<option value="16" >Macedo</option>
+				</select>
+			</div>
+		</div>
+		<div class="tab v4">
+			<input type="radio" id="tab-4" name="tab-group-1" value="4" >
+			<label for="tab-4">4 VS 4</label>
+			<div class="content">
+				<input type="text" class="vdv-1" placeholder="VĐV" name="tab-4-vdv-1" value="">
+				<select class="select-q" name="empires-tab-4-1" onChange="onChangeSelect(this);">
+					<option value="0" >Random</option>
+					<option value="1" >Egyp</option>
+					<option value="2" >Greek</option>
+					<option value="3" >BabyL</option>
+					<option value="4" >Assy</option>
+					<option value="5" >Minoan</option>
+					<option value="6" >Hittite</option>
+					<option value="7" >Phoen</option>
+					<option value="8" >Sumerian</option>
+					<option value="9" >Persian</option>
+					<option value="10" >Shang</option>
+					<option value="11" >Yamato</option>
+					<option value="12" >Choson</option>
+					<option value="13" >Roman</option>
+					<option value="14" >Cartha</option>
+					<option value="15" >Palmyran</option>
+					<option value="16" >Macedo</option>
+				</select>
+				<input type="text" class="vdv-2" placeholder="VĐV" name="tab-4-vdv-2" value="">
+				<select class="select-q" name="empires-tab-4-2" onChange="onChangeSelect(this);">
+					<option value="0" >Random</option>
+					<option value="1" >Egyp</option>
+					<option value="2" >Greek</option>
+					<option value="3" >BabyL</option>
+					<option value="4" >Assy</option>
+					<option value="5" >Minoan</option>
+					<option value="6" >Hittite</option>
+					<option value="7" >Phoen</option>
+					<option value="8" >Sumerian</option>
+					<option value="9" >Persian</option>
+					<option value="10" >Shang</option>
+					<option value="11" >Yamato</option>
+					<option value="12" >Choson</option>
+					<option value="13" >Roman</option>
+					<option value="14" >Cartha</option>
+					<option value="15" >Palmyran</option>
+					<option value="16" >Macedo</option>
+				</select>
+				<input type="text" class="vdv-1" placeholder="VĐV" name="tab-4-vdv-3" value="">
+				<select class="select-q" name="empires-tab-4-3" onChange="onChangeSelect(this);">
+					<option value="0" >Random</option>
+					<option value="1" >Egyp</option>
+					<option value="2" >Greek</option>
+					<option value="3" >BabyL</option>
+					<option value="4" >Assy</option>
+					<option value="5" >Minoan</option>
+					<option value="6" >Hittite</option>
+					<option value="7" >Phoen</option>
+					<option value="8" >Sumerian</option>
+					<option value="9" >Persian</option>
+					<option value="10" >Shang</option>
+					<option value="11" >Yamato</option>
+					<option value="12" >Choson</option>
+					<option value="13" >Roman</option>
+					<option value="14" >Cartha</option>
+					<option value="15" >Palmyran</option>
+					<option value="16" >Macedo</option>
+				</select>
+				<input type="text" class="vdv-2" placeholder="VĐV" name="tab-4-vdv-4" value="">
+				<select class="select-q" name="empires-tab-4-4" onChange="onChangeSelect(this);">
+					<option value="0" >Random</option>
+					<option value="1" >Egyp</option>
+					<option value="2" >Greek</option>
+					<option value="3" >BabyL</option>
+					<option value="4" >Assy</option>
+					<option value="5" >Minoan</option>
+					<option value="6" >Hittite</option>
+					<option value="7" >Phoen</option>
+					<option value="8" >Sumerian</option>
+					<option value="9" >Persian</option>
+					<option value="10" >Shang</option>
+					<option value="11" >Yamato</option>
+					<option value="12" >Choson</option>
+					<option value="13" >Roman</option>
+					<option value="14" >Cartha</option>
+					<option value="15" >Palmyran</option>
+					<option value="16" >Macedo</option>
+				</select>
+				<input type="text" class="vdv-1" placeholder="VĐV" name="tab-4-vdv-5" value="">
+				<select class="select-q" name="empires-tab-4-5" onChange="onChangeSelect(this);">
+					<option value="0" >Random</option>
+					<option value="1" >Egyp</option>
+					<option value="2" >Greek</option>
+					<option value="3" >BabyL</option>
+					<option value="4" >Assy</option>
+					<option value="5" >Minoan</option>
+					<option value="6" >Hittite</option>
+					<option value="7" >Phoen</option>
+					<option value="8" >Sumerian</option>
+					<option value="9" >Persian</option>
+					<option value="10" >Shang</option>
+					<option value="11" >Yamato</option>
+					<option value="12" >Choson</option>
+					<option value="13" >Roman</option>
+					<option value="14" >Cartha</option>
+					<option value="15" >Palmyran</option>
+					<option value="16" >Macedo</option>
+				</select>
+				<input type="text" class="vdv-2" placeholder="VĐV" name="tab-4-vdv-6" value="">
+				<select class="select-q" name="empires-tab-4-6" onChange="onChangeSelect(this);">
+					<option value="0" >Random</option>
+					<option value="1" >Egyp</option>
+					<option value="2" >Greek</option>
+					<option value="3" >BabyL</option>
+					<option value="4" >Assy</option>
+					<option value="5" >Minoan</option>
+					<option value="6" >Hittite</option>
+					<option value="7" >Phoen</option>
+					<option value="8" >Sumerian</option>
+					<option value="9" >Persian</option>
+					<option value="10" >Shang</option>
+					<option value="11" >Yamato</option>
+					<option value="12" >Choson</option>
+					<option value="13" >Roman</option>
+					<option value="14" >Cartha</option>
+					<option value="15" >Palmyran</option>
+					<option value="16" >Macedo</option>
+				</select>
+				<input type="text" class="vdv-1" placeholder="VĐV" name="tab-4-vdv-7" value="">
+				<select class="select-q" name="empires-tab-4-7" onChange="onChangeSelect(this);">
+					<option value="0" >Random</option>
+					<option value="1" >Egyp</option>
+					<option value="2" >Greek</option>
+					<option value="3" >BabyL</option>
+					<option value="4" >Assy</option>
+					<option value="5" >Minoan</option>
+					<option value="6" >Hittite</option>
+					<option value="7" >Phoen</option>
+					<option value="8" >Sumerian</option>
+					<option value="9" >Persian</option>
+					<option value="10" >Shang</option>
+					<option value="11" >Yamato</option>
+					<option value="12" >Choson</option>
+					<option value="13" >Roman</option>
+					<option value="14" >Cartha</option>
+					<option value="15" >Palmyran</option>
+					<option value="16" >Macedo</option>
+				</select>
+				<input type="text" class="vdv-2" placeholder="VĐV" name="tab-4-vdv-8" value="">
+				<select class="select-q" name="empires-tab-4-8" onChange="onChangeSelect(this);">
+					<option value="0" >Random</option>
+					<option value="1" >Egyp</option>
+					<option value="2" >Greek</option>
+					<option value="3" >BabyL</option>
+					<option value="4" >Assy</option>
+					<option value="5" >Minoan</option>
+					<option value="6" >Hittite</option>
+					<option value="7" >Phoen</option>
+					<option value="8" >Sumerian</option>
+					<option value="9" >Persian</option>
+					<option value="10" >Shang</option>
+					<option value="11" >Yamato</option>
+					<option value="12" >Choson</option>
+					<option value="13" >Roman</option>
+					<option value="14" >Cartha</option>
+					<option value="15" >Palmyran</option>
+					<option value="16" >Macedo</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<div class="dc-disable">
+	</div>
+</form>
+<script>
+$('input').change(function() {
+	var value = $(this).val();
+	var name = $(this).attr('name');
+	setCookie(name, value);
+});
+$(document).ready(function(e) {
+	$('input').on('keyup', function() {
+		var value = $(this).val();
+		var name = $(this).attr('name');
+		setCookie(name, value);
+		console.log(name);
+	});
+});
+function onChangeSelect(el) {
+	var name = el.name;
+	var value = el.value;
+	setCookie(name, value);
+}
+function setCookie(name,value,days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+}
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+</script>
+</body>
+
+<!-- Mirrored from keo.aoe.vn/bg.png by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Oct 2024 06:34:02 GMT -->
+</html>
